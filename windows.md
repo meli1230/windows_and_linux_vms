@@ -17,22 +17,22 @@ If you don't see any package loss, then congratulations! It works and you may no
 
 ## Windows Server
 
-### Domain
+#### Domain
 The server's domain name is domeniu.local and both the client and the server are in that domain.
 
-### Users and groups
+#### Users and groups
 There are 3 users and 2 groups created:
 - user1 and user2 are in group1
 - user2 and user3 are in group2
 
-### Block access to control panel (GPE)
+#### Block access to control panel (GPE)
 There is a policy set on WS that blocks the access to control panel for the users. In order to see the implementation of the rules, follow these steps from Windows Server: *tools -> group policy editor -> forest -> domains -> domeniu.local*. <br/>
 Once you are here, you will see 2 created rules:
 - disable task manager
 - no control panel
 The first rule disables task manager for group1 and the second disables control panel for group2.
 
-### File transfer
+#### File transfer
 In order to change rwx (read, write, execute) permissions for a shared file within the domain, you need to follow these steps: 
 - open Computer Management -> system tools -> shared folders -> shares -> propersties of sf1 -> share permissions
 

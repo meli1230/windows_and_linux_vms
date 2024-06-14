@@ -3,28 +3,13 @@
 - password: Proiectso123
 - domain name: domeniu.local
 - users:
-  - user1 password
-
-
-
-
-Windows Server 
-- user: Administrator
-- user in domain: DOMENIU\Administrator
-- password: Proiectso123
-- ip: 192.168.250.2
-- dns: 127.0.0.1
-- domain name: domeniu.local
-- NETBIOS domain name: DOMENIU
-- domain password: Proiectso123
-- users:
-	- user1, initial pwd: Proiectso123 -> new pwd: Sisteme12!
-	- user2, initial pwd: Proiectso123 -> new pwd: Sisteme12!
-	- user3, initial pwd: Proiectso123 -> new pwd: Sisteme12!
-- groups: 
+  - user1, user2, user3
+  - the password for all 3 users is Sisteme12!
+- groups:
 	- grup1: user1, user2
-	- grup2: user2, user3
-- 
+	- grup2: user2, user 3
+
+
 
 PROIECT:
 Windows Client

@@ -46,11 +46,11 @@ As iterated in the WS section, we found out that there are 3 users and 2 groups 
 ### Group Policy Editor
 Apart from the policy set from WC for the groups, I have also set a local firewall rule in proiectso, which you will need to enable and then disable yoruself after you are done with testing it. In order to find the policy, you need to navigate to: *Group Policy Editor -> user configuration -> administrative templates -> control panel -> prohibit access to control panl -> tick enabled*. Once you have done that, the access to control panel should be prohibited. In order to disable it, simply untick the enabled box.
 
-### Task Scheduler:
+### Task Scheduler
 Another implemented functionality is a scheduled task. The chosen automation is opening notepad when the clock reaches a certain time. In order to test this, you will need to set the time yourself to an upcoming moment.
 In order to do so, you will need to follow these steps: *open Task Scheduler -> task scheduler library -> open notepad -> properties -> triggers*. When you got here, set the time to your liking and then wait until the clock reaches that value. When that happens, notepad should open automatically.
 
-### Script:
+### Script
 You may have noticed two files on the desktop already: *script.bat* and *script.txt*. Click the *script.bat* file and see what it does. <br/>
 As you have probably noticed, the script created a folder on Desktop, that contains a textfile with some writing in it. 
 <br/>In order to see how that was done, open *script.txt*, which contains the same script that was used to automate the folder and file creation you just saw.

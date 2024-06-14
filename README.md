@@ -24,32 +24,11 @@ This project contains 3 virtual machines: a machine that runs Windows Server, on
 - user1 and user2 and in group1, while user2 and user3 and in group2
 
 
-
-##### Firewall
+##### Make sure they work:
 - in order to be able to ping the main user on Windows Client, make sure that all firewall options and disabled on both the client and the server
-  
+- check the 
 
-
-
-## Windows 10 Pro
-
-
-## Ubuntu
-
-
--------------------------------------------------------------------------------------------------------
-WINDOWS SERVER:
-
-Firewall:
-1. disable firewall & check ping to client
-
-2. on the spot:
-	- enable firewall
-	- control panel -> windows defender firewall -> advanced settings -> inbound rules -> 192.168.250.1 blocked -> properties -> enabled -> ok
-	- go to client 
-
-3. disable firewall
-
+##### Block access to control panel
 
 Group Policy Editor:
 - tools -> gpe -> forest -> domains -> domeniu.local -> 
@@ -63,6 +42,18 @@ IIS & DNS
 
 File Trasnfer:
 - computer management -> shared folders -> shares -> properties sf1 -> share persmissions
+
+## Windows 10 Pro
+
+
+## Ubuntu
+
+
+-------------------------------------------------------------------------------------------------------
+WINDOWS SERVER:
+
+
+
 
 
 

@@ -1,6 +1,6 @@
-## Windows Server (WS) and Windows Client (WC)
+# Windows Server (WS) and Windows Client (WC)
 
-### Making sure they connect
+## Making sure they connect
 Before we start doing anything else, you need to first make sure that our VMs work properly and are interconnected. In order to do so, you need to follow these steps:
 - power both machines up (they need to be on at the same time)
 - login with
@@ -15,7 +15,7 @@ After having done all that, open Command Prompt on both machines and type:
 If you don't see any package loss, then congratulations! It works and you may now proceed further.
 
 
-### Windows Server
+## Windows Server
 
 #### Domain
 The server's domain name is domeniu.local and both the client and the server are in that domain.
@@ -39,7 +39,7 @@ In order to change rwx (read, write, execute) permissions for a shared file with
 Now you may now change the folder's permissions. You can do so for any file you create here, which you can do by simply pressing right click on the blank space, select new share and then you can make your own configuaration for the file.
 
 
-### Windows Client
+## Windows Client
 #### Users and groups
 As iterated in the WS section, we found out that there are 3 users and 2 groups created. However, there is another user that I have not talked about yet, which is proiectso. This user was the one that was used to make the domain connection between WS and WC. I will remind you that you can find the credentials for the users in the credentials.md file. 
 

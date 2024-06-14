@@ -86,7 +86,7 @@ In order to switch between users in the terminal, use the command *su [user_name
 #### VSFTPD
 Ftp, also known as file transfer protocol, is a daemon used to easily transfer files between Windows and Linux. Ftp is already installed on the VM, so all you have to do is use it. Here is a step by step guide of how to do that:
 - Linux Terminal
-	-  *ftp* <span color="blue">-> cu aceasta comanda se intra <span/>
+	-  *ftp* <span style = "color:grey">-> cu aceasta comanda se intra <span/>
  - asdasd
 
 

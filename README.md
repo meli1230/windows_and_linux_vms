@@ -70,8 +70,7 @@ As you have probably noticed, the script created a folder on Desktop, that conta
 ### Ubuntu
 #### Making the machine run properly
 Before jumping into the functionalities that I have implemented, you need to make a few changes in a file, in order to make sure that the IP address used in it is the same as the one of the VM. What you need to modify is located in etc/hosts, which you can reach by typing the follow these steps: 
-- open Terminal and type *ipconfig*
-- in the returned result, search for inet, which should be followed by your ip address
+- open Terminal and type *ipconfig*- in the returned result, search for inet, which should be followed by your ip address
 - the next command we need to type in the terminal is *sudo nano /etc/hosts*
 Once you opened this file, you need to replace every ip address you see with your ip address, which you have just discovered by using *ifconfig*. When done, press ctrl+x to save the file and then enter to exit.
 
@@ -81,28 +80,39 @@ Once it downloaded, open *putty.exe*. In the window that just opened, make sure 
 You may now continue to use putty in the same way you would use the Terminal on the VM.
 
 #### Users
-In order to switch between users in the terminal, use the command *su [user_name]*. For example, to switch to user1 we would write *su user1*.
+In order to switch between users in the terminal, use the command *su user_name*. For example, to switch to user1 we would write *su user1*.
 
 #### VSFTPD
-Ftp, also known as file transfer protocol, is a daemon used to easily transfer files between Windows and Linux. Ftp is already installed on the VM, so all you have to do is use it. Here is a step by step guide of how to do that:
-- Linux Terminal
-	-  *ftp* <span style = "color:blue">-> cu aceasta comanda se intra <span/>
- - asdasd
+Ftp, also known as file transfer protocol, is a daemon used to easily transfer files between Windows and Linux. Ftp is already installed on the VM, so all you have to do is use it. Before proceeding further, we assume that a file *c.txt* is already created in Ubuntu and another one, named *d.txt* is created in Windows. After making sure that those files exist, follow these steps:
+- Linux Terminal:
+	- *ftp*
+ 	- *open localhost*
+  - provide username and password
+  - *put c.txt* --> this command pushes the file into ftp
+- Windows Command Prompt:
+	- *ftp*
+  - *open ubuntu_machine_ip_address* --> ex: *open 192.168.250.1*
+  - *get c.txt* --> this command gets the file that was previously pushed from Ubuntu and places it in the Users folder
+  - *!dir* --> you should see *c.txt* in the returned list
+  - *put d.txt*
+- Linux Terminal:
+	- *get d.txt*
+  - *cd ls -l* --> you should see the *d.txt* in the returned list
+
+#### Firewall
+Just as I set some firewall rules in Windows, I have done that in Linux too. I will now tell you step by step what you need to do in order to set a firewall rule, how to test it and, in the end, how to remove it. 
+- open the terminal
+- *sudo ufw enable* 
+- *sudo ufw deny 22* --> blocks the 22 port, which is the one SSH uses
+- *sudo ufw status* --> you should see port 22 as denied
+That's it! Now if you open putty and try to connect to the VM, your should not be able to do so. <br/>
+In case you want to use putty again, you will need to run the following commands in the Linux Terminal:
+- *sudo ufw allow 22* --> allows the 22 port
+- *sudo ufw disable* 
 
 
-VSFTPD / ftp:
-- ftp 
+#### Server mail:
 
-Samba:
-- ii dau drepturi de add si remove files !!!!!!!
-
-Firewall:
-- sudo ufw
-	- enable
-	- allow 22
-	- status
-	- deny 22
-	- disable
 
 Server mail:
 - switch to chatgpt

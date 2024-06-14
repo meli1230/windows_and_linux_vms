@@ -1,5 +1,5 @@
 ### Windows Server
-- user: DOMENIU\Administrator
+- main user: DOMENIU\Administrator
 - password: Proiectso123
 - domain name: domeniu.local
 - users:
@@ -18,7 +18,7 @@
 
 
 ### Ubuntu
-- user: proiectso
+- main user: proiectso
 - password: Proiectso123
 - users: 
 - user1, Proiectso123

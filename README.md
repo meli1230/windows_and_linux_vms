@@ -10,11 +10,11 @@ This project contains 3 virtual machines: a machine that runs Windows Server, on
 
 # Functionalities
 ## Windows Server
-### Users and groups
+##### Users and groups
 - there are 3 users and 2 groups creaed
 - user1 and user2 and in group1, while user2 and user3 and in group2
 
-### Firewall
+##### Firewall
   
 
 

@@ -45,7 +45,7 @@ In case you want to use putty again, you will need to run the following commands
 - *sudo ufw disable* 
 
 
-#### Server mail
+### Server mail
 Another available functionality from the Terminal is sending an email. For that, I have used Postfix Dovecott and I have only implemented the email sending. To test this service, run in the Terminal:
 - *su chatgpt* --> switching to *chatgpt* user
 - *mutt* --> access the mail service
@@ -55,6 +55,6 @@ Another available functionality from the Terminal is sending an email. For that,
 At the bottom of the window, yoy should be prompted to write the recipient of your email, which is where you will write *bard@vaibhav.com*, in order to send an email to the *bard* user. After that, you will need to fill in a subject and, in the end, an editable file will open. This is where the body of the email is. Once you typed anything there, you may save by pressing *ctrl+x*. In the end, press *y* to send.
 
 
-#### Apache
+### Apache
 The last thing that I implemented in this machine is Apache, which I have used to make two individual websites: site1.com and site2.com. These websites do not contain much information, as they were made purely to demonstrate how Apache works. In order to see their contents, go to the VM, open mozilla and type in the search bar *http://site1.com*, respectively *http://site2.com*. The websites should pop up.<br/>
 You may view the websites' html code in */var/www/gci/site1.html*, respectively */var/www/gci/site2.html*.

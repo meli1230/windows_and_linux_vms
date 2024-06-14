@@ -1,37 +1,123 @@
-# windows_and_linux_vms
-This project contains 3 virtual machines: a machine that runs Windows Server, one that runs Windows Client and the last one running Ubuntu. The alterations made in each VM is thoroughly described in the README file.
-
 # Brief overview
-This project, using SQL, manages the database of a fictional car dealership. Apart from table creation, structure alteration and data insertion, it also contains views and queries, which are used to display relevant information, such as the performance of different selling locations. <br/>
+This project contains 3 virtual machines: a machine that runs Windows Server, one that runs Windows Client and the last one running Ubuntu. Each VM has been uploaded to OneDrive, since they are large files that cannot be directly uploaded to GitHub. The link to each VM will be provided in the next block. <br/>
 
 
-# Structure
-- create_alter_tables.sql --> creation of tables and alterations
-- populate_tables.sql --> population of tables with data
-- views_and_queries --> views and queries on the created views
+# Links:
+- [Windows Server 2022]()
+- [Windows 10 Pro (client)]()
+- [Ubuntu 24.04]()
 
 
-# Views and queries
-In the views_and_queries file, the code written there responds to possible questions of a fictional manager of the dealeriship chain. Those demands are, as follows:
-- Display the dealerships, the cars that are or used to be in stock, their price and the chassis number. Then, based on this information, display the dealerships that sold vehicles for an amount greater than a number chosen by the manager (the displayed sum should not include price reductions of any kind).
-- Display all the clients and their departments, in alphabetical order of their surname and then of their name.
-- Which vehicles are or used to be in stock? Display the models and their prices for the vehicles that are still in stock, and for the others, display the invoice number, the date and time of the sale and the client's name.
-- How much money did each dealership make from selling cars, including price reductions? Order the dealerships by their performance.
+# Functionalities
+## Windows Server
+### Users and groups
+- there are 3 users and 2 groups creaed
+- user1 and user2 and in group1, while user2 and user3 and in group2
+
+### Firewall
   
 
-# How to run
-In order to run the program, you will need to download a tool that can execute SQL scripts, such as SQLite or DB Browser (provides a graphical interface). You then need to clone the files in this repo and then run create_alter_tables.sql and then populate_tables.sql. In order to see the views, and queries, you need to run them separately.
+
+
+## Windows 10 Pro
+
+
+## Ubuntu
+
+
+-------------------------------------------------------------------------------------------------------
+WINDOWS SERVER:
+Users & groups:
+- Tools -> acrive directory users and computers -> users
+
+
+Firewall:
+1. disable firewall & check ping to client
+
+2. on the spot:
+	- enable firewall
+	- control panel -> windows defender firewall -> advanced settings -> inbound rules -> 192.168.250.1 blocked -> properties -> enabled -> ok
+	- go to client 
+
+3. disable firewall
+
+
+Group Policy Editor:
+- tools -> gpe -> forest -> domains -> domeniu.local -> 
+	- disable task manager -> ii aratam a avem
+	- no control panel -> ii aratam a avem
+
+
+IIS & DNS
+- ii aratam site-urile din IIS & DNS din Server Manager
+
+
+File Trasnfer:
+- computer management -> shared folders -> shares -> properties sf1 -> share persmissions
 
 
 
+WINDOWS CLIENT:
+Firewall:
+1. disable firewall & check ping to client
 
-## Projects
+2. continue here
+	- enable firewall
+	- cmd -> ping 192.168.250.2
 
-### [Contacts list](https://github.com/meli1230/contacts_list)
-A short project, coded in C, that manages a contact list using a doubly linked list. The program allows you to add or remove contacts, to search contacts by name and to display all the contacts. It also includes two sorting functions, each using a different sorting algorithm.
+3. disable firewall
 
-### [Fictional car dealership](https://github.com/meli1230/car_dealership)
-An SQL project that manages the database of a fictional car dealership. Apart from table creation, structure alteration and data insertion, it also contains views and queries, which are used to display relevant information, such as the performance of different selling locations.
 
-### [Windows and Linux virtual machines](https://github.com/meli1230/windows_and_linux_vms)
-A project that contains 3 virtual machines: a machine that runs Windows Server, one that runs Windows Client and the last one running Ubuntu. The alterations made in each VM is thoroughly described in the README file of the project.
+Group Policy Editor:
+- gpe -> user configuration -> administrative templates -> control panel -> prohibit acces to control panel and pc settings -> enabled 
+- dupa, dam disable inapoi
+- verificam ca merge acum control panel
+
+
+Task Scheduler:
+- task scheduler -> task scheduler library -> open notepad -> properties
+	- ii aratam setarile e care le-am facut la conditions
+		- untick start the task only if the computer is on ac power
+	- set an upcoming time
+
+Script:
+- script.bat -> run
+- ii aratam in fisierul script.txt script-ul folosit pentru a crea folderul
+
+
+Firewall rule:
+- control panel -> windows defender firewall -> advanced settings -> inbound rule -> block self connection -> enabled
+- enable firewall
+- check if it works: Windows Server -> cmd -> ping 192.168.250.1
+- disable the rule
+- disable firewall
+
+
+
+UBUNTU:
+SSH:
+- putty
+
+Users:
+- switch to user 1
+
+VSFTPD / ftp:
+- ftp 
+
+Samba:
+- ii dau drepturi de add si remove files !!!!!!!
+
+Firewall:
+- sudo ufw
+	- enable
+	- allow 22
+	- status
+	- deny 22
+	- disable
+
+Server mail:
+- switch to chatgpt
+- bard@vaibhav.com
+
+Site / virtual host:
+- http://site1.com

@@ -1,11 +1,5 @@
 # Brief overview
-This project contains 3 virtual machines: a machine that runs Windows Server, one that runs Windows Client and the last one running Ubuntu. Each VM has been uploaded to OneDrive, since they are large files that cannot be directly uploaded to GitHub. The link to each VM will be provided in the next block. <br/>
-
-
-# Links:
-- [Windows Server 2022](https://1drv.ms/u/s!AiJja_jxQJ8ggcEwll38qT2MzAKr7g?e=Pkzo33)
-- [Windows 10 Pro (client)](https://1drv.ms/u/s!AiJja_jxQJ8ggcExgBdDiV4oxcC1Pw?e=YVAN1b)
-- [Ubuntu 24.04](https://1drv.ms/u/s!AiJja_jxQJ8ggcEv0frjZymaAmBMww?e=VUducP)
+This project contains 3 virtual machines: a machine that runs Windows Server, one that runs Windows Client and the last one running Ubuntu. Each VM has been uploaded to OneDrive, since they are large files that cannot be directly uploaded to GitHub. You can access the folder that contains the VMs [here](https://1drv.ms/f/s!AiJja_jxQJ8ggcEzTFktyAXqb-zKIA?e=uXwwhq) <br/>
 
 
 # How to run
@@ -17,7 +11,14 @@ This project contains 3 virtual machines: a machine that runs Windows Server, on
 ## Windows Server (WS) and Windows Client (WC)
 
 ### Making sure they connect
-Before we start doing anything else, you need to first make sure that our VMs work properly and are interconnected. In order to do so, you need to power both machines up (they need to be on at the same time), open Command Prompt on both and write the follwoing commands:
+Before we start doing anything else, you need to first make sure that our VMs work properly and are interconnected. In order to do so, you need to follow these steps:
+- power both machines up (they need to be on at the same time)
+- login with
+	- the admin user on WS
+ 	- proiectso on WC
+- disable all firewall options on both machines
+
+After having done all that, open Command Prompt on both machines and type:
 - In WS: ping 192.168.250.1
 - In WC: ping 192.168.250.2
 
@@ -26,60 +27,40 @@ If you don't see any package loss, then congratulations! It works and you may no
 
 ### Windows Server
 
-##### Domain
+#### Domain
 The server's domain name is domeniu.local and both the client and the server are in that domain.
 
-##### Users and groups
+#### Users and groups
 There are 3 users and 2 groups created:
 - user1 and user2 are in group1
 - user2 and user3 are in group2
 
-##### Block access to control panel
-There is a policy set on WS that blocks the access to control panel for the users. In order to activate it, if it is not already active, follow the steps from the Server Manager window: **tools -> group policy editor -> forest -> domains -> domeniu.local**
-Here
+#### Block access to control panel (GPE)
+There is a policy set on WS that blocks the access to control panel for the users. In order to see the implementation of the rules, follow these steps from Windows Server: **tools -> group policy editor -> forest -> domains -> domeniu.local**
+Once you are here, you will see 2 created rules:
+- disable task manager
+- no control panel
+The first rule disables task manager for group1 and the second disables control panel for group2.
 
-Group Policy Editor:
-- tools -> gpe -> forest -> domains -> domeniu.local -> 
-	- disable task manager -> ii aratam a avem
-	- no control panel -> ii aratam a avem
-
-
-IIS & DNS
-- ii aratam site-urile din IIS & DNS din Server Manager
-
-
-File Trasnfer:
-- computer management -> shared folders -> shares -> properties sf1 -> share persmissions
-
-### Windows 10 Pro
+#### File transfer
+In order to change rwx (read, write, execute) permissions for a shared file within the domain, you need to follow these steps: 
+- open Computer Management -> system tools -> shared folders -> shares -> propersties of sf1 -> share permissions
+Once you got here, you may now change the folder's permissions. You can do so for any file you create here, which you can do by simply pressing right click on the blank space, select new share and then you can make your own configuaration for the file.
 
 
-### Ubuntu
+### Windows Client
+#### Users and groups
+As iterated in the WS section, we found out that there are 3 users and 2 groups created. However, there is another user that I have not talked about yet, which is proiectso. This user was the one who was originally connected 
+I will remind you that you can find the credentials for the users in the credentials.md file. 
 
 
--------------------------------------------------------------------------------------------------------
-WINDOWS SERVER:
+#### Group Policy Editor
+Apart from the policy set from WC for the groups, I have also set a local firewall rule in proiectso, which you will need to enable and then disable yoruself after you are done with testing it. In order to find the policy, you need to navigate to: **Group Policy Editor -> user configuration -> administrative templates -> control panel -> prohibit access to control panl -> tick enabled**.
+Once you have done that, the access to control panel should be prohibited. In order to disable it, simply untick the enabled box.
 
 
+#### Task Scheduler:
 
-
-
-
-WINDOWS CLIENT:
-Firewall:
-1. disable firewall & check ping to client
-
-2. continue here
-	- enable firewall
-	- cmd -> ping 192.168.250.2
-
-3. disable firewall
-
-
-Group Policy Editor:
-- gpe -> user configuration -> administrative templates -> control panel -> prohibit acces to control panel and pc settings -> enabled 
-- dupa, dam disable inapoi
-- verificam ca merge acum control panel
 
 
 Task Scheduler:
@@ -99,6 +80,18 @@ Firewall rule:
 - check if it works: Windows Server -> cmd -> ping 192.168.250.1
 - disable the rule
 - disable firewall
+
+### Ubuntu
+
+
+-------------------------------------------------------------------------------------------------------
+WINDOWS SERVER:
+
+
+
+
+
+
 
 
 

@@ -58,7 +58,7 @@ Apart from the policy set from WC for the groups, I have also set a local firewa
 Once you have done that, the access to control panel should be prohibited. In order to disable it, simply untick the enabled box.
 
 #### Task Scheduler:
-Another implemented functionality is a scheduled task. The chosen automation is opening notepad when the clock reaches a certain time. In order to test this, you will need to set the time yourself to an upcoming moment. <br/>
+Another implemented functionality is a scheduled task. The chosen automation is opening notepad when the clock reaches a certain time. In order to test this, you will need to set the time yourself to an upcoming moment.
 In order to do so, you will need to follow these steps: **open Task Scheduler -> task scheduler library -> open notepad -> properties -> triggers**.<br/>
 When you got here, set the time to your liking and then wait until the clock reaches that value. When that happens, notepad should open automatically.
 

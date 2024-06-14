@@ -1,5 +1,5 @@
 # Brief overview
-This project contains 3 virtual machines: a machine that runs Windows Server, one that runs Windows Client and the last one running Ubuntu. The alterations made in each VM is thoroughly described in this file. <br/>
+This project contains 3 virtual machines: a machine that runs Windows Server, one that runs Windows Client and the last one running Ubuntu. <br/>
 Each VM has been uploaded to OneDrive, since they are large files that cannot be directly uploaded to GitHub. You can access the folder that contains the VMs [here](https://1drv.ms/f/s!AiJja_jxQJ8ggcEzTFktyAXqb-zKIA?e=uXwwhq).<br/>
 
 
@@ -9,6 +9,7 @@ Each VM has been uploaded to OneDrive, since they are large files that cannot be
 
 
 # Functionalities
+The functionalities will be 
 
 ## Windows Server (WS) and Windows Client (WC)
 
@@ -123,6 +124,7 @@ Another available functionality from the Terminal is sending an email. For that,
 
 At the bottom of the window, yoy should be prompted to write the recipient of your email, which is where you will write *bard@vaibhav.com*, in order to send an email to the *bard* user. After that, you will need to fill in a subject and, in the end, an editable file will open. This is where the body of the email is. Once you typed anything there, you may save by pressing *ctrl+x*. In the end, press *y* to send.
 
+#### 
 
 
 Site / virtual host:

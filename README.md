@@ -47,6 +47,7 @@ The first rule disables task manager for group1 and the second disables control 
 #### File transfer
 In order to change rwx (read, write, execute) permissions for a shared file within the domain, you need to follow these steps: 
 - open Computer Management -> system tools -> shared folders -> shares -> propersties of sf1 -> share permissions
+
 Once you got here, you may now change the folder's permissions. You can do so for any file you create here, which you can do by simply pressing right click on the blank space, select new share and then you can make your own configuaration for the file.
 
 

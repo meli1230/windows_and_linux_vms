@@ -9,4 +9,4 @@ Each VM has been uploaded to OneDrive, since they are large files that cannot be
 
 
 # Functionalities
-The functionalities are presented in the *windowsClient.md*, *windowsServer.md*, respectively *ubuntu.md* files.
+The functionalities are presented in the *windows.md* and *ubuntu.md* files.

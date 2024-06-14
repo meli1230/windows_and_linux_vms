@@ -3,18 +3,30 @@ This project contains 3 virtual machines: a machine that runs Windows Server, on
 
 
 # Links:
-- [Windows Server 2022]()
-- [Windows 10 Pro (client)]()
-- [Ubuntu 24.04]()
+- [Windows Server 2022](https://1drv.ms/u/s!AiJja_jxQJ8ggcEwll38qT2MzAKr7g?e=Pkzo33)
+- [Windows 10 Pro (client)](https://1drv.ms/u/s!AiJja_jxQJ8ggcExgBdDiV4oxcC1Pw?e=YVAN1b)
+- [Ubuntu 24.04](https://1drv.ms/u/s!AiJja_jxQJ8ggcEv0frjZymaAmBMww?e=VUducP)
+
+
+# How to run
+- CHECK THE CREDENTIALS FILE !!!!!!!------------------------------
 
 
 # Functionalities
+
 ## Windows Server
+
+##### Domain
+- the server's domain name is domeniu.local
+
 ##### Users and groups
 - there are 3 users and 2 groups creaed
 - user1 and user2 and in group1, while user2 and user3 and in group2
 
+
+
 ##### Firewall
+- in order to be able to ping the main user on Windows Client, make sure that all firewall options and disabled on both the client and the server
   
 
 
@@ -27,9 +39,6 @@ This project contains 3 virtual machines: a machine that runs Windows Server, on
 
 -------------------------------------------------------------------------------------------------------
 WINDOWS SERVER:
-Users & groups:
-- Tools -> acrive directory users and computers -> users
-
 
 Firewall:
 1. disable firewall & check ping to client

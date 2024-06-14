@@ -14,21 +14,29 @@ This project contains 3 virtual machines: a machine that runs Windows Server, on
 
 # Functionalities
 
-## Windows Server
+## Windows Server (WS) and Windows Client (WC)
+
+### Making sure they connect
+Before we start doing anything else, you need to first make sure that our VMs work properly and are interconnected. In order to do so, you need to power both machines up (they need to be on at the same time), open Command Prompt on both and write the follwoing commands:
+- In WS: ping 192.168.250.1
+- In WC: ping 192.168.250.2
+
+If you don't see any package loss, then congratulations! It works and you may now proceed further.
+
+
+### Windows Server
 
 ##### Domain
-- the server's domain name is domeniu.local
+The server's domain name is domeniu.local and both the client and the server are in that domain.
 
 ##### Users and groups
-- there are 3 users and 2 groups creaed
-- user1 and user2 and in group1, while user2 and user3 and in group2
-
-
-##### Make sure they work:
-- in order to be able to ping the main user on Windows Client, make sure that all firewall options and disabled on both the client and the server
-- check the 
+There are 3 users and 2 groups created:
+- user1 and user2 are in group1
+- user2 and user3 are in group2
 
 ##### Block access to control panel
+There is a policy set on WS that blocks the access to control panel for the users. In order to activate it, if it is not already active, follow the steps from the Server Manager window: **tools -> group policy editor -> forest -> domains -> domeniu.local**
+Here
 
 Group Policy Editor:
 - tools -> gpe -> forest -> domains -> domeniu.local -> 
@@ -43,10 +51,10 @@ IIS & DNS
 File Trasnfer:
 - computer management -> shared folders -> shares -> properties sf1 -> share persmissions
 
-## Windows 10 Pro
+### Windows 10 Pro
 
 
-## Ubuntu
+### Ubuntu
 
 
 -------------------------------------------------------------------------------------------------------

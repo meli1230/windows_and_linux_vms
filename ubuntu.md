@@ -1,10 +1,11 @@
 # Ubuntu
-### Making the machine run properly
+#### Making the machine run properly
 Before jumping into the functionalities that I have implemented, you need to make a few changes in a file, in order to make sure that the IP address used in it is the same as the one of the VM. What you need to modify is located in etc/hosts, which you can reach by typing the follow these steps: 
 - open Terminal and type *ipconfig*- in the returned result, search for inet, which should be followed by your ip address
 - the next command we need to type in the terminal is *sudo nano /etc/hosts*
 Once you opened this file, you need to replace every ip address you see with your ip address, which you have just discovered by using *ifconfig*. When done, press *ctrl+x* to save the file and then enter to exit.
 
+#### Functionalities
 ### SSH Putty
 The first thing that I installed on my virtual machine is SSH, which stands for Secure Shell. This a protocol that will let use an app like putty to remotely connect to our virtual machine from any other machine, regardless of the native operating system. To test putty you need to first install the app on your physical machine or on any other machine you would like. You can use [this link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to simply get an exe file, from the *Alternative binary file* section.<br/><br/>
 Once it downloaded, open *putty.exe*. In the window that just opened, make sure that *Port 22* is selected, as well as *Connection type: SSH* and, after that, write the IP address of the Ubuntu VM in the *Host Name (or IP address) section*. If you have done that correctly, a terminal-like window should pop up, requesting a username and password. <br/><br/>

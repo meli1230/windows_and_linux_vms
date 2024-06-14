@@ -4,7 +4,7 @@
 - domain name: domeniu.local
 - users:
   - user1, user2, user3
-  - the password for all 3 users is Sisteme12!
+  - password for all users: Sisteme12!
 - groups:
 	- grup1: user1, user2
 	- grup2: user2, user3
@@ -20,7 +20,9 @@
 ### Ubuntu
 - main user: proiectso
 - password: Proiectso123
-- users: 
+- users:
+	- user1, user2, user3, chatgpt, bard
+	- password for all users: Proiectso123
 - user1, Proiectso123
 	- user2, Proiectso123
 	- user3, Proiectso123

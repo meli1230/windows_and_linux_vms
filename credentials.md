@@ -8,11 +8,13 @@
 - groups:
 	- grup1: user1, user2
 	- grup2: user2, user3
+- manually set IP address: 192.168.250.2
 
 
 ### Windows Client
 - user: proiectso
 - password: Proiectso123
+- manually set IP address: 192.168.250.1
 
 
 ### Ubuntu

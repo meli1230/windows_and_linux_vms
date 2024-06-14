@@ -106,7 +106,7 @@ Just as I set some firewall rules in Windows, I have done that in Linux too. I w
 - *sudo ufw deny 22* --> blocks the 22 port, which is the one SSH uses
 - *sudo ufw status* --> you should see port 22 as denied
 
-<br/>That's it! Now if you open putty and try to connect to the VM, your should not be able to do so. <br/>
+That's it! Now if you open putty and try to connect to the VM, your should not be able to do so. <br/>
 In case you want to use putty again, you will need to run the following commands in the Linux Terminal:
 - *sudo ufw allow 22* --> allows the 22 port
 - *sudo ufw disable* 

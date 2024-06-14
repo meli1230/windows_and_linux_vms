@@ -1,5 +1,5 @@
 # Ubuntu
-#### Making the machine run properly
+## Making the machine run properly
 Before jumping into the functionalities that I have implemented, you need to make a few changes in a file, in order to make sure that the IP address used in it is the same as the one of the VM. What you need to modify is located in etc/hosts, which you can reach by typing the follow these steps: 
 - open Terminal and type *ipconfig*- in the returned result, search for inet, which should be followed by your ip address
 - the next command we need to type in the terminal is *sudo nano /etc/hosts*

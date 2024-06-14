@@ -21,3 +21,17 @@ In the views_and_queries file, the code written there responds to possible quest
 
 # How to run
 In order to run the program, you will need to download a tool that can execute SQL scripts, such as SQLite or DB Browser (provides a graphical interface). You then need to clone the files in this repo and then run create_alter_tables.sql and then populate_tables.sql. In order to see the views, and queries, you need to run them separately.
+
+
+
+
+## Projects
+
+### [Contacts list](https://github.com/meli1230/contacts_list)
+A short project, coded in C, that manages a contact list using a doubly linked list. The program allows you to add or remove contacts, to search contacts by name and to display all the contacts. It also includes two sorting functions, each using a different sorting algorithm.
+
+### [Fictional car dealership](https://github.com/meli1230/car_dealership)
+An SQL project that manages the database of a fictional car dealership. Apart from table creation, structure alteration and data insertion, it also contains views and queries, which are used to display relevant information, such as the performance of different selling locations.
+
+### [Windows and Linux virtual machines](https://github.com/meli1230/windows_and_linux_vms)
+A project that contains 3 virtual machines: a machine that runs Windows Server, one that runs Windows Client and the last one running Ubuntu. The alterations made in each VM is thoroughly described in the README file of the project.

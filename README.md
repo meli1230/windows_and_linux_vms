@@ -5,6 +5,7 @@ Each VM has been uploaded to OneDrive, since they are large files that cannot be
 
 # How to run
 - CHECK THE CREDENTIALS FILE !!!!!!!------------------------------
+- talk about escape key ------------------------------------!!!!
 
 
 # Functionalities
@@ -37,7 +38,7 @@ There are 3 users and 2 groups created:
 - user2 and user3 are in group2
 
 #### Block access to control panel (GPE)
-There is a policy set on WS that blocks the access to control panel for the users. In order to see the implementation of the rules, follow these steps from Windows Server: **tools -> group policy editor -> forest -> domains -> domeniu.local**. <br/>
+There is a policy set on WS that blocks the access to control panel for the users. In order to see the implementation of the rules, follow these steps from Windows Server: *tools -> group policy editor -> forest -> domains -> domeniu.local*. <br/>
 Once you are here, you will see 2 created rules:
 - disable task manager
 - no control panel
@@ -54,22 +55,29 @@ Once you got here, you may now change the folder's permissions. You can do so fo
 As iterated in the WS section, we found out that there are 3 users and 2 groups created. However, there is another user that I have not talked about yet, which is proiectso. This user was the one that was used to make the domain connection between WS and WC. I will remind you that you can find the credentials for the users in the credentials.md file. 
 
 #### Group Policy Editor
-Apart from the policy set from WC for the groups, I have also set a local firewall rule in proiectso, which you will need to enable and then disable yoruself after you are done with testing it. In order to find the policy, you need to navigate to: **Group Policy Editor -> user configuration -> administrative templates -> control panel -> prohibit access to control panl -> tick enabled**.<br/>
-Once you have done that, the access to control panel should be prohibited. In order to disable it, simply untick the enabled box.
+Apart from the policy set from WC for the groups, I have also set a local firewall rule in proiectso, which you will need to enable and then disable yoruself after you are done with testing it. In order to find the policy, you need to navigate to: *Group Policy Editor -> user configuration -> administrative templates -> control panel -> prohibit access to control panl -> tick enabled*. Once you have done that, the access to control panel should be prohibited. In order to disable it, simply untick the enabled box.
 
 #### Task Scheduler:
 Another implemented functionality is a scheduled task. The chosen automation is opening notepad when the clock reaches a certain time. In order to test this, you will need to set the time yourself to an upcoming moment.
-In order to do so, you will need to follow these steps: **open Task Scheduler -> task scheduler library -> open notepad -> properties -> triggers**.<br/>
-When you got here, set the time to your liking and then wait until the clock reaches that value. When that happens, notepad should open automatically.
+In order to do so, you will need to follow these steps: *open Task Scheduler -> task scheduler library -> open notepad -> properties -> triggers*. When you got here, set the time to your liking and then wait until the clock reaches that value. When that happens, notepad should open automatically.
 
 #### Script:
 You may have noticed two files on the desktop already: *script.bat* and *script.txt*. Click the *script.bat* file and see what it does. <br/>
-As you have probably noticed, the script created a folder on Desktop, that contains a textfile with some writing in it. In order to see how that was done, open *script.txt*, which contains the same script that was used to automate the folder and file creation you just saw.
+As you have probably noticed, the script created a folder on Desktop, that contains a textfile with some writing in it. 
+<br/>In order to see how that was done, open *script.txt*, which contains the same script that was used to automate the folder and file creation you just saw.
 
 
 ### Ubuntu
+#### Making the machine run properly
+Before jumping into the functionalities that I have implemented, you need to make a few changes in a file, in order to make sure that the IP address used in it is the same as the one of the VM. What you need to modify is located in etc/hosts, which you can reach by typing the follow these steps: 
+- open Terminal and type *ipconfig*
+- in the returned result, search for inet, which should be followed by your ip address
+- the next command we need to type in the terminal is *sudo nano /etc/hosts*
+Once you opened this file, you need to replace every ip address you see with your ip address, which you have just discovered by using *ifconfig*. When done, press ctrl+x to save the file and then enter to exit.
 
-
+#### SSH Putty
+The first thing that I installed on my virtual machine is SSH, which stands for Secure Shell. This a protocol that will let use an app like putty to remotely connect to our virtual machine from any other machine, regardless of the native operating system. To test putty you need to first install the app on your physical machine or on any other machine you would like. You can use [this link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to simply get an exe file, from the *Alternative binary file* section.<br/>
+Once it downloaded, open *putty.exe*. In the window that just opened, make sure that *Port 22* is selected, as well as *Connection type: SSH* and, after that, write the IP address of the Ubuntu VM in the *Host Name (or IP address) section*. 
 
 SSH:
 - putty

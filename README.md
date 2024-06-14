@@ -115,10 +115,16 @@ In case you want to use putty again, you will need to run the following commands
 
 
 #### Server mail:
-
+Another available functionality from the Terminal is sending an email. For that, I have used Postfix Dovecott and I have only implemented the email sending. To test this service, run in the Terminal:
+- *su chatgpt* --> switching to *chatgpt* user
+- *mutt* --> access the mail service
+- if prompted, press *a*
+- press *m* to start the process of sending a new email
+- To: *bard@vaibhav.com* --> send an email to bard
 
 Server mail:
 - switch to chatgpt
+- - mutt
 - bard@vaibhav.com
 
 Site / virtual host:

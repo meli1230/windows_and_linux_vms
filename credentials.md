@@ -26,4 +26,4 @@
 - user1, Proiectso123
 	- user2, Proiectso123
 	- user3, Proiectso123
-- modify ip address in terminal: $ sudo nano /etc/hosts 
+- modify ip address from terminal: $ sudo nano /etc/hosts 

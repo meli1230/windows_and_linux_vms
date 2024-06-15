@@ -4,6 +4,7 @@ Each VM has been uploaded to OneDrive, since they are large files that cannot be
 
 
 # How to run
+To run these virtual machines, you will need a virtualization program, such as VirtualBox, which you can find [here](https://www.virtualbox.org/wiki/Downloads). Once you have installed and configured the app, go to *File -> Import appliance* and select the *.ova file* you would like to import.
 - CHECK THE CREDENTIALS FILE !!!!!!!------------------------------
 - talk about escape key ------------------------------------!!!!
 

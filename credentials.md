@@ -1,4 +1,4 @@
-### Windows Server
+## Windows Server
 - main user: DOMENIU\Administrator
 - password: Proiectso123
 - domain name: domeniu.local
@@ -11,13 +11,13 @@
 - manually set IP address: 192.168.250.2
 
 
-### Windows Client
+## Windows Client
 - user: proiectso
 - password: Proiectso123
 - manually set IP address: 192.168.250.1
 
 
-### Ubuntu
+## Ubuntu
 - main user: proiectso
 - password: Proiectso123
 - users:

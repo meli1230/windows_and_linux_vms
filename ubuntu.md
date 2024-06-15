@@ -56,5 +56,5 @@ At the bottom of the window, yoy should be prompted to write the recipient of yo
 
 
 ### Apache
-The last thing that I implemented in this machine is Apache, which I have used to make two individual websites: site1.com and site2.com. These websites do not contain much information, as they were made purely to demonstrate how Apache works. In order to see their contents, go to the VM, open mozilla and type in the search bar *http://site1.com*, respectively *http://site2.com*. The websites should pop up.<br/>
+The last thing that I implemented in this machine is Apache, which I have used to make two individual websites: site1.com and site2.com. These websites do not contain much information, as they were made purely to demonstrate how Apache works. In order to see their contents, go to the VM, open mozilla and type in the search bar *http://site1.com*, respectively *http://site2.com*. The websites should pop up.<br/><br/>
 You may view the websites' html code in */var/www/gci/site1.html*, respectively */var/www/gci/site2.html*.

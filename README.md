@@ -8,7 +8,7 @@ To run these virtual machines, you will need a virtualization program, such as V
 
 When running, if your mouse or keyboard get captured, you may release it by pressing the key that is specified in the right bottom corner of the window. Usually, the key you need to press is *right ctrl*.<br/><br/>
 
-Moreover, if you want to press *ctrl+alt+del* within your VM, you must do to from the ribbon, by clicking on *Input -> insert ctrl*alt*del*. If you simply press that on the keyboard, the action will be performed by the physical machine and not by the virtual one.<br/><br/>
+Moreover, if you want to press *ctrl+alt+del* within your VM, you must do to from the ribbon, by clicking on *Input -> insert ctrl+alt+del*. If you simply press that on the keyboard, the action will be performed by the physical machine and not by the virtual one.<br/><br/>
 
 In order to login on any of the users on the VMs, check the *credentials.md* file to learn the usernme and passwords that you need.
 
